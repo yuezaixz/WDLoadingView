@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Index View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IndexViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-CO-QiC">
+                                <rect key="frame" x="180" y="40" width="240" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O1u-UY-lfP"/>
+                                    <constraint firstAttribute="width" constant="240" id="i5R-FJ-IP9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFH-q2-c19">
+                                <rect key="frame" x="180" y="96" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="startView1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgE-yA-5Sd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXE-sU-8u6">
+                                <rect key="frame" x="389" y="96" width="31" height="30"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stopView1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x8V-QX-jqi"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ii8-UV-6VG">
+                                <rect key="frame" x="285" y="169" width="30" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="JdB-UY-LrJ"/>
+                                    <constraint firstAttribute="height" constant="240" id="ktS-x5-2oa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26J-tM-qmn">
+                                <rect key="frame" x="180" y="435" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="startView2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5t-7T-jrx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A1-Pg-d0G">
+                                <rect key="frame" x="389" y="435" width="31" height="30"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stopView2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H62-o7-bcE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xkb-CO-QiC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1HA-kC-x5c"/>
+                            <constraint firstItem="Ii8-UV-6VG" firstAttribute="top" secondItem="xkb-CO-QiC" secondAttribute="bottom" constant="99" id="40m-I0-cwg"/>
+                            <constraint firstItem="BFH-q2-c19" firstAttribute="top" secondItem="xkb-CO-QiC" secondAttribute="bottom" constant="26" id="4Wt-fb-wcw"/>
+                            <constraint firstItem="BFH-q2-c19" firstAttribute="leading" secondItem="xkb-CO-QiC" secondAttribute="leading" id="8aH-xO-FhB"/>
+                            <constraint firstItem="2A1-Pg-d0G" firstAttribute="top" secondItem="Ii8-UV-6VG" secondAttribute="bottom" constant="26" id="ArZ-zM-Zmb"/>
+                            <constraint firstItem="26J-tM-qmn" firstAttribute="top" secondItem="Ii8-UV-6VG" secondAttribute="bottom" constant="26" id="RAP-xF-AKr"/>
+                            <constraint firstItem="mXE-sU-8u6" firstAttribute="trailing" secondItem="xkb-CO-QiC" secondAttribute="trailing" id="VLM-Ir-3hp"/>
+                            <constraint firstItem="2A1-Pg-d0G" firstAttribute="centerX" secondItem="mXE-sU-8u6" secondAttribute="centerX" id="aOX-LV-hgt"/>
+                            <constraint firstItem="26J-tM-qmn" firstAttribute="centerX" secondItem="BFH-q2-c19" secondAttribute="centerX" id="cVU-xR-hsa"/>
+                            <constraint firstItem="mXE-sU-8u6" firstAttribute="top" secondItem="xkb-CO-QiC" secondAttribute="bottom" constant="26" id="elf-xY-deG"/>
+                            <constraint firstItem="xkb-CO-QiC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kys-Cc-cdW"/>
+                            <constraint firstItem="Ii8-UV-6VG" firstAttribute="centerX" secondItem="xkb-CO-QiC" secondAttribute="centerX" id="p2h-uu-l5H"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="view1" destination="xkb-CO-QiC" id="fOB-La-P4r"/>
+                        <outlet property="view2" destination="Ii8-UV-6VG" id="oPH-Hn-Co1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="545" y="529"/>
         </scene>
     </scenes>
 </document>

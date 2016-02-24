@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  IndexViewController.h
 //  WDLoadingView
 //
 //  Created by 吴迪玮 on 16/2/24.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface IndexViewController : UIViewController
 
 @end
-
